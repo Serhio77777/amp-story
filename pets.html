@@ -1,0 +1,158 @@
+<!doctype html>
+<html ⚡>
+  <head>
+    <meta charset="utf-8">
+    <title>Joy of Pets</title>
+    <link rel="canonical" href="pets.html">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400" rel="stylesheet">
+    <script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-0.1.js"></script>
+    <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+    <style amp-custom>
+      amp-story {
+        font-family: 'Oswald',sans-serif;
+        color: #fff;
+      }
+      amp-story-page {
+        background-color: #000;
+      }
+      h1 {
+        font-weight: bold;
+        font-size: 2.875em;
+        font-weight: normal;
+        line-height: 1.174;
+      }
+      p {
+        font-weight: normal;
+        font-size: 1.3em;
+        line-height: 1.5em;
+        color: #fff;
+      }
+      q {
+        font-weight: 300;
+        font-size: 1.1em;
+      }
+      amp-story-grid-layer.bottom {
+        align-content:end;
+      }
+      amp-story-grid-layer.noedge {
+        padding: 0px;
+      }
+      amp-story-grid-layer.center-text {
+        align-content: center;
+      }
+      .wrapper {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+      }
+      .banner-text {
+        text-align: center;
+        background-color: #000;
+        line-height: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <amp-story standalone>
+      <amp-story-page id="cover" background-audio="assets/rain-01.mp3">
+        <amp-story-grid-layer template="fill" animate-in="fade-in">
+          <amp-img src="assets/rain-first.jpg"
+              width="720" height="1280"
+              layout="responsive">
+          </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical" animate-in="fly-in-left">
+          <h1>That is only the rain</h1>
+          <p>By AMP Tutorials</p>
+        </amp-story-grid-layer>
+      </amp-story-page>
+
+      <amp-story-page id="cats">
+        <amp-story-grid-layer template="vertical" animate-in="rotate-in-left">
+          <h1>Cats</h1>
+          <amp-img src="assets/cat.jpg"
+              width="720" height="1280"
+              layout="responsive">
+          </amp-img>
+          <q>Dogs come when they're called. Cats take a message and get back to you. --Mary Bly</q>
+        </amp-story-grid-layer>
+      </amp-story-page>
+
+      <amp-story-page id="rain-second" background-audio="assets/rain-02.mp3">
+        <amp-story-grid-layer template="fill" animate-in="twirl-in">
+          <amp-img src="assets/rain-second.jpg"
+              width="720" height="1280"
+              layout="responsive">
+          </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical" animate-in="whoosh-in-left">
+          <h1>Life in Rain...</h1>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical" class="bottom" animate-in="whoosh-in-right">
+          <q>The life it's like the rain => can be strong or small...</q>
+        </amp-story-grid-layer>
+      </amp-story-page>
+
+      <amp-story-page id="dogs">
+        <amp-story-grid-layer template="fill" animate-in="fly-in-top">
+          <amp-img src="assets/dog.jpg"
+              width="720" height="1280"
+              layout="responsive">
+          </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="third" animate-in="pulse">
+          <h1>Dogs</h1>
+          <p grid-area="lower-third"  class="bottom">Dogs were probably the first tame animals.
+            They have accompanied humans for some 10,000 years.
+            Some scientists assert that all dogs, domestic and wild, share a common ancestor in the small South Asian wolf.</p>
+        </amp-story-grid-layer>
+      </amp-story-page>
+
+      <amp-story-page id="rain-third" background-audio="assets/rain-03.mp3">
+        <amp-story-grid-layer template="fill">
+          <amp-img src="assets/rain-third.jpg"
+              width="720" height="1280"
+              layout="responsive">
+          </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical">
+          <h1>Life in Rain...</h1>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical" class="bottom">
+          <q>The life it's like the rain => can be strong or small...</q>
+        </amp-story-grid-layer>
+      </amp-story-page>
+
+      <amp-story-page id="rabbit" background-audio="assets/saxophone-romantic-havana-romantic-saxophone-romantic-saxoph.mp3">
+        <amp-story-grid-layer template="fill" animate-in="pulse">
+          <amp-video controls
+            width="720"
+            height="1280"
+            layout="responsive"
+            autoplay="true"
+            loop="true"
+            title="Awesome video"
+            artist="Awesome artist"
+            album="Amazing album"
+            poster="assets/rabbit.jpg">
+            <source src="assets/rabbit.mp4"
+              type="video/mp4" />
+            <div fallback>
+              <p>This browser does not support the video element.</p>
+            </div>
+          </amp-video>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical">
+          <h1>Rabbit...</h1>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical" class="bottom">
+          <q>Rabbits can learn to follow simple voice commands and come when called by name, and are curious and playful.</q>
+        </amp-story-grid-layer>
+      </amp-story-page>
+
+    </amp-story>
+  </body>
+</html>

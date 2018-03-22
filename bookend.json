@@ -15,6 +15,11 @@
         "title": "Learn about cats",
         "url": "https://en.wikipedia.org/wiki/Cat",
         "image": "assets/related-cats.jpg"
+      },
+      {
+        "title": "Whay is rain?",
+        "url": "https://en.wikipedia.org/wiki/Rain",
+        "image": "assets/rain-fourth.jpg"
       }
     ]
   }

@@ -1,0 +1,28 @@
+{
+  "name": "amp-pets-story",
+  "version": "1.0.0",
+  "description": "This folder contains the files for the \"Create a visual AMP Story\" tutorial.",
+  "main": "runner.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Serhio77777/amp-story.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Serhio77777/amp-story/issues"
+  },
+  "homepage": "https://github.com/Serhio77777/amp-story#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "path": "^0.12.7",
+    "phantomjs": "^2.1.7",
+    "phantomjs-prebuilt": "^2.1.16",
+    "process": "^0.11.10",
+    "puppeteer": "^1.2.0",
+    "webpage": "^0.3.0"
+  }
+}

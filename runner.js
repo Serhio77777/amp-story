@@ -1,25 +1,4 @@
-// var page = require('webpage').create()
-// page.viewportSize = { width: 640, height: 480 }
-//
-// page.open('https://61a6b043.ngrok.io/', function () {
-//   setTimeout(function () {
-//     // Initial frame
-//     var frame = 0
-//     // Add an interval every 25th second
-//     var timer = setInterval(function () {
-//       // Render an image with the frame name
-//       page.render('./frames/page' + (frame++) + '.png', {format: 'png'})
-//
-//       if (frame > 50) {
-//         console.log('Done')
-//         clearInterval(timer)
-//         // page.close()
-//         phantom.exit()
-//       }
-//     }, 15)
-//   }, 2500)
-// })
-const url = 'https://61a6b043.ngrok.io'
+const url = 'https://1af55ced.ngrok.io'
 
 const puppeteer = require('puppeteer')
 
@@ -45,24 +24,30 @@ let start = async () => {
   // Initial frame
   // await page.screenshot({path: './frames/page0.png'})
   var frame = 0
-  let worker = async function (resolve, reject) {
+  let worker = function (resolve, reject) {
     frame++
     // Render an image with the frame name
+    console.log(frame)
     try {
-      await page.screenshot({path: './frames/page' + frame + '.png'})
+      page.screenshot({path: './frames/page0' + frame + '.png'})
     } catch (e) {
       console.error(e)
     }
 
-    if (frame > 30) {
+    if (frame > 500) {
       console.log('Done')
       resolve()
+    } else {
+      worker(resolve, reject)
     }
   }
-  await new Promise((resolve, reject) => {
+  let makeScreenshot = new Promise((resolve, reject) => {
     setTimeout(() => {
       worker(resolve, reject)
     }, 15)
+  })
+  await Promise.all([makeScreenshot]).then(() => {
+    console.log(3423)
   })
   // await browser.close()
 }

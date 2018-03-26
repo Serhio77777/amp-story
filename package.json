@@ -23,6 +23,7 @@
     "phantomjs-prebuilt": "^2.1.16",
     "process": "^0.11.10",
     "puppeteer": "^1.2.0",
+    "puppeteer-recorder": "^1.0.7",
     "webpage": "^0.3.0"
   }
 }

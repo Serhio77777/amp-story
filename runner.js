@@ -1,5 +1,5 @@
 // const url = 'https://amp-research.stageserver.org/'
-const url = 'https://11cb062a.ngrok.io'
+const url = 'https://0e3748d8.ngrok.io'
 
 // const { record } = require('./videoCreation')
 // const puppeteer = require('puppeteer')
@@ -7,59 +7,10 @@ const url = 'https://11cb062a.ngrok.io'
 // const Recorder = require('chrome-recorder')
 
 const Chromy = require('chromy')
-// const CDP = require('chrome-remote-interface')
 const fs = require('fs')
 let chromy = new Chromy()
 let frame = 0
 
-// CDP((client) => {
-//   // extract domains
-//   console.log(client)
-//   const {Chrome} = client
-//   console.log(Chrome)
-//   // setup handlers
-//   Network.requestWillBeSent((params) => {
-//     console.log(params.request.url)
-//   })
-//   Page.loadEventFired(() => {
-//     client.close()
-//   })
-//   console.log(Page)
-//   // enable events then start!
-//   Promise.all([
-//     Network.enable(),
-//     Page.enable()
-//   ]).then(() => {
-//     return Page.navigate({url: url})
-//   }).then(() => {
-//     return Page.click('.i-amphtml-story-experiment-error button')
-//   }).then(() => {
-//     return Page.navigate({url: url})
-//   }).then(() => {
-//     Page.wait(500)
-//     return Page.evaluate(() => {
-//       let problem = document.querySelector('.i-amphtml-story-no-rotation-overlay')
-//       console.log(213, problem)
-//       if (problem) {
-//         problem.className = ''
-//       }
-//     })
-//   }).then(() => {
-//     Page.startScreencast({format: 'png', everyNthFrame: 1})
-//     while (counter < 100) {
-//       const {data, metadata, sessionId} = Page.screencastFrame()
-//       console.log(data, metadata, sessionId)
-//       counter++
-//       Page.screencastFrameAck({sessionId: sessionId})
-//     }
-//   }).catch((err) => {
-//     console.error(err)
-//     client.close()
-//   })
-// }).on('error', (err) => {
-//   // cannot connect to the remote endpoint
-//   console.error('Error', err)
-// })
 async function main () {
   // await chromy.chain()
 
@@ -96,6 +47,8 @@ async function main () {
     await fs.writeFile('results/out' + frame + '.png', photo.data, 'base64')
     console.log(photo.metadata, frame)
   }, {
+    format: 'png',
+    quality: 100,
     maxWidth: 400,
     maxHeight: 720,
     everyNthFrame: 1
